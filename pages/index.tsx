@@ -1,6 +1,8 @@
 
 
 import Link from 'next/link';
+// import * from 'react';
+import React from 'react';
 import { client } from '../libs/cliant'
 
 
@@ -24,16 +26,18 @@ export const getStaticProps =  async () => {
 
 export default function Home({blog}: {blog:any}) {
   return (
-    <div>
+    <React.Fragment>
+    <h3>ブログ</h3>
      {blog.map((blogelment: any) => (
       <li key = {blogelment.id}>
         <Link href={ `/blog/${blogelment.id}`} >
-          <div>{blogelment.title}</div>
+          {blogelment.title}
         {/* <a href=''> {blog.title}</a> */}
         </Link>
       </li>
      ))}
-  </div>
+
+  </React.Fragment>
   
   
   

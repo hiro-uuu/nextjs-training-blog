@@ -4,9 +4,7 @@ import {
     GetStaticProps,
   } from "next";
 
-// type Props = {
-//     params:any
-// }
+
 
 export const getStaticProps: GetStaticProps = async (context) => {
 
